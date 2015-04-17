@@ -65,9 +65,74 @@
 		document.write(Math.E);
 		var n = prompt("Enter a number", "0-100"); //The quotation marks after the comma are used to type a placeholder for the input field. In this case 0-100 is the placeholder.
 		var answer = Math.sqrt(n);
-		alert("The square root of " + n + " is " + answer +".");*/
+		alert("The square root of " + n + " is " + answer +".");
 		
+		//This is the setInterval function. This runs a function by how much time you want to increment by.
+		function doSomething(){
+			document.write("Tuna");
+		}
+		setInterval("doSomething()", 1000);
 		
+		//This is the date object.(It grabs the current date and time).
+		function printTime() {
+			var now = new Date();
+			var hours = now.getHours();
+			var mins = now.getMinutes();
+			var seconds = now.getSeconds();
+			document.write(hours+":"+mins+":"+seconds+"<br />");
+		}
+		
+		setInterval("printTime()", 1000);
+		
+		//DOM is Document Object Model. Every element in a DOM can be considered nodes.
+		//DOM retrieves elements in the page by two methods.(document.getElementBYID(ID)) and (document.getElementByTagName(name).
+		//The result of getting elements by tag name is an array. So you can grab a specific tag. Tags are p, li, ol, h1, etc...
+		
+		x = document.getElementByTagName("li");
+		o = x[3];
+		p = o.previousSibling//This looks to the array above the one specified in the first line.
+		<div id ="navigation">
+			<ul>
+				<li>""</li>
+				<li>""</li>
+				<li>""</li>
+			</ul>
+		</div>
+		
+		//childNodes is another function, this looks for child nodes of the element you are in.
+		x = document.getElementByTagName('li");
+		o = x.childNodes;
+		
+		//nodeType can be a 1 for an element node or 3 for text nodes.
+		//nodeName stores the name of the node.(either element name or #textname).
+		//nodeValue can be "null" for element nodes or "#text" for text nodes.
+		//node.getAttribute(attribute);
+		//node.setAttribute(attribute, value..);
+		//You can remove nodes.
+		
+		//This takes an element, in this case 'nav' and puts another 'li' in it.
+		o = document.getElementBYID('nav');
+		p = document.createElement('li');
+		o.appendChild(p);*/
+		
+		function createDayDictionary() {
+		var days = new Array();
+			days['Sunday'] = 1;
+			days['Monday'] = 2;
+			days['Tuesday'] = 3;
+			days['Wednesday'] = 4;
+			days['Thursday'] = 5;
+			days['Friday'] = 6;
+			days['Saturday'] = 7;
+		}
+		
+		function showDays() {
+			alert(days['Sunday']);
+			alert(days['Thursday']);
+			alert(days['Saturday']);
+		}
+		
+				
 	</script>
 </head>
 
